@@ -1,0 +1,332 @@
+ @font-face {
+  font-family: 'Agrandir Light';
+  src: url("../Font/Agrandir/Agrandir-GrandLight.otf");
+ }
+ @font-face {
+  font-family: 'Agrandir Medium';
+  src: url("../Font/Agrandir/Agrandir-TextBold.otf");
+ }
+ @font-face {
+  font-family: 'Agrandir Heavy';
+  src: url("../Font/Agrandir/Agrandir-GrandHeavy.otf");
+ }
+
+ *{
+     margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      body{
+        background:url('/Images/Background/main3.jpg');
+      }
+
+ /* Navigation Bar */
+.navbar {
+    background-color: #98c5e9; 
+    font-family: "Agrandir Medium";
+    font-size: 1.5rem;
+}
+.navbar .navbar-toggler{
+  border: none;
+  margin-bottom: 2rem;
+}
+.navbar > .container-fluid{
+  display: flex;
+}
+.navbar img{
+    max-width: 90px;
+}
+.nav-brand{
+    font-family:'Quicksand', sans-serif;
+    color: white;
+    padding: 0.3em;
+}
+.navbar .navbar-nav .nav-link{
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.collapse ul> li > a{
+  text-decoration: none;
+  background-image: linear-gradient(95deg, red,blue);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  transition: background-size 500ms ease-in-out;
+}
+.collapse ul> li > a:hover{
+  background-size: 100% 3px;
+  color: inherit;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown .dropdown-menu{
+    background-color: #aeeafc;
+
+}
+.dropend:hover .dropdown-menu{
+  position: absolute;
+  left: 11.7rem;
+  top: 0.2rem;
+  display:block;
+}
+
+.dropdown ul> li > a{
+  text-decoration: none;
+  background-image: linear-gradient(95deg, red,blue);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  transition: background-size 500ms ease-in-out;
+}
+.dropdown ul> li > a:hover{
+  
+  background:linear-gradient(95deg, rgb(157, 157, 255), rgb(75, 153, 255));
+  background-size: 100% 3px;
+  color: inherit;
+}
+
+/* article styling  */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container > fieldset {
+  border: 5px solid rgba(50,50,50,1);
+  margin: auto auto 20px;
+  max-width: 0;
+  padding: 20px 30px 30px;
+  transition: all 0.25s;
+}
+.container >.innerBody{
+ border:purple;
+}
+.container > .formContact{
+  background-color: #98c5e9;
+}
+.container > .formEvent{
+  background-color: #98c5e9;
+}
+.container > .formMessage{
+  background-color: #98c5e9;
+}
+
+.container > fieldset:hover {border: 5px solid rgba(225,200,250,1);}
+
+.container > legend {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.container > input, textarea {
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px;
+  outline: rgba(200,200,200,1) solid 1px;
+  padding: 10px;
+  transition: all 0.25s;
+}
+
+.container> .halfWidthInput {
+  width: 230px;
+}
+
+.container > .fullWidthInput {
+  width: 500px;
+}
+
+.container > input:focus, textarea:focus {
+  outline: rgba(225,200,250,1) solid 1px;
+  outline-offset: 0;
+}
+
+.container > input[type="color"] {
+  height: 30px; width: 140px;
+}
+
+.container > textarea {resize: vertical;}
+
+.container > input[type="submit"] {
+  background: rgba(50,50,50,1);
+  color: rgba(255,255,255,1);
+  outline: none;
+  min-width: 300px;
+}
+
+.container > input[type="submit"]:hover {
+  background: rgba(0,0,0,1);
+}
+
+.container > input[type="submit"]:focus {
+  background: rgba(200,100,200,1);
+}
+/*------------------- footer ------------------------*/
+
+
+.footer ion-icon {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #952184;
+}
+.footer-container{
+  background:linear-gradient(135deg,#98c5e9, rgb(186, 186, 247));
+  padding-bottom: 3rem;
+  
+}    
+.footer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.container-heading{
+  display: flex;
+  flex-direction: column;
+  margin-right: 6rem;
+
+}
+.container-heading h3{
+  font-family: 'Agrandir Medium';
+  padding-top: 15px;
+  padding-bottom:5px;
+  text-decoration: none;
+  background-image: linear-gradient(95deg, red,blue);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  transition: background-size 500ms ease-in-out;
+}
+
+.container-heading h3:hover{
+  background-size: 100% 3px;
+  color: inherit;
+}
+
+.container-heading p{
+  font-family: "Agrandir Light";
+}
+
+
+.container-heading a{
+  font-family: 'Agrandir Light';
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  position: relative;
+}
+
+.container-heading a:hover{
+  text-decoration: underline;
+}
+
+.container-heading input{
+  width: 100%;
+  background: transparent;
+  color:rgb(255, 255, 255);
+  border:0;
+}
+.container-heading input:hover{
+  background:whitesmoke;
+  transition:1s;
+}
+.footer-container > form{
+  padding-bottom:15px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(228, 82, 82);
+  margin-bottom: 50px;
+}
+
+.footer-container > form input{
+  width: 100%;
+  background: transparent;
+}
+
+.footer-container > button{
+  background: transparent;
+  cursor: pointer;
+}
+.submit{
+  border: none;
+  background: transparent;
+}
+
+
+#logo{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.copyright{
+  text-align: center;
+  height: 90%;
+}
+.copyright hr{
+  width: 90%;
+  border-bottom: 1px solid red;
+  margin: 20px auto;
+}
+
+.copyright p{
+  font-family: 'Agrandir Light';
+}
+
+#img{
+  height: 30px;
+  width: 50px;
+}
+
+.methods{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.formcontents{
+  display: flex;
+}
+
+.footer-logo{
+ max-width: 100px;
+ height: auto;
+ padding-top: 3rem;
+ padding-right: 1rem;
+}
+
+@media (max-width:500px){
+  .footer-logo{
+    max-width: 100%;
+  }
+  .about{
+   padding-left: 4rem;
+    max-width: 70%;
+  }
+  .contact{
+   padding-left: 4rem;
+  }
+  .socials{
+    padding-left: 7rem;
+  }
+  .account{
+    padding-left: 7rem;
+  }
+  .payments{
+    padding-left: 7rem;
+  }
+  .news{
+    padding-left: 7rem;
+  }
+}

@@ -1,0 +1,11 @@
+.container{
+background-color: blueviolet;
+width: 50%;
+}
+
+.card img{
+    border: black 2px solid;
+}
+.card-text{
+   font-family: 'Agrandir Light'; 
+}

@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Agrandir';
+  src: url(../Font/Agrandir/Agrandir-GrandLight.otf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  
+}
+body{
+  background: blue;
+  background: url(../Images/Background/kdb.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+ background-position-y:-10rem ;
+}
+
+.header{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+img{
+  max-height: 100px;
+  max-width: 100px;
+}
+
+a{
+  text-decoration: none;
+}
+p{  color: white;
+  font-style: italic;
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+article{
+  padding-top: 7rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+article> h1{
+  font-size: 7rem;
+}
+article>h2{
+  font-size: 4rem;
+}
+
+/* styling sign in button */
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color:black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Agrandir';
+  font-weight: 800;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+/* styling button with giving linear-gradient effect */
+.btn {
+ background:linear-gradient(135deg,#a6cbff,#fc00ff);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.btn:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn span:before,
+.btn span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn span:hover:before {
+  width: 100%;
+}
+.btn span:hover:after {
+  width: 100%;
+}
+
+/* Responsive Designs */
+@media screen and (max-width:900px){
+  body{
+    background: blue;
+    background: url(../Images/Background/kdb.gif);
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+  }
+  img{
+    max-height: 75px;
+    max-width: 75px;
+  }
+  p{ 
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  
+  article{
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  article> h1{
+    font-size: 5rem;
+  }
+  article>h2{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width:722px){
+  article{
+    text-align: center;
+  }
+
+}
+@media screen and (max-width:600px){
+  .header{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+ 
+  img{
+    max-height: 50px;
+    max-width: 50px;
+  }
+  p{ 
+    font-size: 0.7rem;
+
+  }
+  
+  article> h1{
+    font-size: 3rem;
+  }
+  article>h2{
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width:477px){
+  body{
+    background: blue;
+    background: url(../Images/Background/kdb.gif);
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+  }
+  img{
+    max-height: 40px;
+    max-width: 40px;
+  }
+  p{
+    font-size: 0.75rem;
+  }
+
+}
+

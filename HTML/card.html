@@ -1,0 +1,349 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Training</title>
+    <link rel="stylesheet" href="../CSS/card.css">
+    <link rel="icon" href="../Images/mancitylogo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="../JS/card.js"></script>
+  </head>
+  <body>
+    <!-- nav heads -->
+    <nav class="navbar navbar-expand-lg"style="position: sticky; z-index:100; top:0;">
+        <div class="container-fluid">
+          <div class="dropdown">
+            <a class="navbar-brand ps-4" href="home.html"><img src="../Images/mancitylogo.png" alt="" ></a>
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="home.html">Home</a></li>
+              <li><a class="dropdown-item" href="notice.html">Notice Board</a></li>
+              <div class="dropend">
+                <button class=" btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Training
+               </button>
+               <ul class="dropdown-menu">
+                <li><a href="today.html" class="dropdown-item">Today</a></li >
+                <li><a href="thisWeek.html" class="dropdown-item" >This Week</a></li>
+                <li><a href="attendance.html" class="dropdown-item" >Attendance</a></li>
+                <li><a href="equipemnt.html" class="dropdown-item" >Equipment Record</a></li>
+              </ul>
+              </div>
+              <div class="dropend">
+                <button class=" btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Player Services
+               </button>
+               <ul class="dropdown-menu">
+                <li><a href="medical.html" class="dropdown-item">Medical</a></li >
+                <li><a href="counselling.html" class="dropdown-item" >Counselling</a></li>
+              </ul>
+              </div>
+              <div class="dropend">
+                <button class=" btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Staff Services
+               </button>
+               <ul class="dropdown-menu">
+                <li><a href="promotion.html" class="dropdown-item">Promotion</a></li >
+                <li><a href="resignation.html" class="dropdown-item" >Resignation</a></li>
+              </ul>
+              </div>
+              <li><a class="dropdown-item" href="sponsor.html">Partner and Sponsor</a></li>
+              <li><a class="dropdown-item" href="rules.html">Rules & Regulations</a></li>
+            </ul>
+          </div>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="notice.html">Notice</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="cityplus.html">City+</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://www.mancity.com/fixtures">Fixture</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://www.mancity.com/tickets">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="player.html">Players</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="inventory.html">Inventory</a>
+              </li>
+            </ul>
+          
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="navbar-brand" href="#"><img src="../Images/profile.jpg" class="" alt="" style="width: 70px; height:80px; border-radius: 50%;"><a>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                  <li><a class="dropdown-item" href="settings.html">Account Settings</a></li>
+                  <li><a class="dropdown-item" href="signIn.html">Log Out</a></li>
+                </ul>
+              </div>
+          </div>
+
+        </div>
+      </nav>
+<br>
+
+<!-- contents of the webpage -->
+<article>
+    <div class="wrapper" id="app">
+        <div class="card-form">
+          <div class="card-list">
+            <div class="card-item" v-bind:class="{ '-active' : isCardFlipped }">
+              <div class="card-item__side -front">
+                <div class="card-item__focus" v-bind:class="{'-active' : focusElementStyle }" v-bind:style="focusElementStyle" ref="focusElement"></div>
+                <div class="card-item__cover">
+                  <img
+                  v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + currentCardBackground + '.jpeg'" class="card-item__bg">
+                </div>
+                
+                <div class="card-item__wrapper">
+                  <div class="card-item__top">
+                    <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png" class="card-item__chip">
+                    <div class="card-item__type">
+                      <transition name="slide-fade-up">
+                        <img v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + getCardType + '.png'" v-if="getCardType" v-bind:key="getCardType" alt="" class="card-item__typeImg">
+                      </transition>
+                    </div>
+                  </div>
+                  <label for="cardNumber" class="card-item__number" ref="cardNumber">
+                    <template v-if="getCardType === 'amex'">
+                     <span v-for="(n, $index) in amexCardMask" :key="$index">
+                      <transition name="slide-fade-up">
+                        <div
+                          class="card-item__numberItem"
+                          v-if="$index > 4 && $index < 14 && cardNumber.length > $index && n.trim() !== ''"
+                        >*</div>
+                        <div class="card-item__numberItem"
+                          :class="{ '-active' : n.trim() === '' }"
+                          :key="$index" v-else-if="cardNumber.length > $index">
+                          {{cardNumber[$index]}}
+                        </div>
+                        <div
+                          class="card-item__numberItem"
+                          :class="{ '-active' : n.trim() === '' }"
+                          v-else
+                          :key="$index + 1"
+                        >{{n}}</div>
+                      </transition>
+                    </span>
+                    </template>
+    
+                    <template v-else>
+                      <span v-for="(n, $index) in otherCardMask" :key="$index">
+                        <transition name="slide-fade-up">
+                          <div
+                            class="card-item__numberItem"
+                            v-if="$index > 4 && $index < 15 && cardNumber.length > $index && n.trim() !== ''"
+                          >*</div>
+                          <div class="card-item__numberItem"
+                            :class="{ '-active' : n.trim() === '' }"
+                            :key="$index" v-else-if="cardNumber.length > $index">
+                            {{cardNumber[$index]}}
+                          </div>
+                          <div
+                            class="card-item__numberItem"
+                            :class="{ '-active' : n.trim() === '' }"
+                            v-else
+                            :key="$index + 1"
+                          >{{n}}</div>
+                        </transition>
+                      </span>
+                    </template>
+                  </label>
+                  <div class="card-item__content">
+                    <label for="cardName" class="card-item__info" ref="cardName">
+                      <div class="card-item__holder">Card Holder</div>
+                      <transition name="slide-fade-up">
+                        <div class="card-item__name" v-if="cardName.length" key="1">
+                          <transition-group name="slide-fade-right">
+                            <span class="card-item__nameItem" v-for="(n, $index) in cardName.replace(/\s\s+/g, ' ')" v-if="$index === $index" v-bind:key="$index + 1">{{n}}</span>
+                          </transition-group>
+                        </div>
+                        <div class="card-item__name" v-else key="2">Full Name</div>
+                      </transition>
+                    </label>
+                    <div class="card-item__date" ref="cardDate">
+                      <label for="cardMonth" class="card-item__dateTitle">Expires</label>
+                      <label for="cardMonth" class="card-item__dateItem">
+                        <transition name="slide-fade-up">
+                          <span v-if="cardMonth" v-bind:key="cardMonth">{{cardMonth}}</span>
+                          <span v-else key="2">MM</span>
+                        </transition>
+                      </label>
+                      /
+                      <label for="cardYear" class="card-item__dateItem">
+                        <transition name="slide-fade-up">
+                          <span v-if="cardYear" v-bind:key="cardYear">{{String(cardYear).slice(2,4)}}</span>
+                          <span v-else key="2">YY</span>
+                        </transition>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-item__side -back">
+                <div class="card-item__cover">
+                  <img
+                  v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + currentCardBackground + '.jpeg'" class="card-item__bg">
+                </div>
+                <div class="card-item__band"></div>
+                <div class="card-item__cvv">
+                    <div class="card-item__cvvTitle">CVV</div>
+                    <div class="card-item__cvvBand">
+                      <span v-for="(n, $index) in cardCvv" :key="$index">
+                        *
+                      </span>
+    
+                  </div>
+                    <div class="card-item__type">
+                        <img v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + getCardType + '.png'" v-if="getCardType" class="card-item__typeImg">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-form__inner">
+            <div class="card-input">
+              <label for="cardNumber" class="card-input__label">Card Number</label>
+              <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask" v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber" autocomplete="off">
+            </div>
+            <div class="card-input">
+              <label for="cardName" class="card-input__label">Card Holders</label>
+              <input type="text" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off">
+            </div>
+            <div class="card-form__row">
+              <div class="card-form__col">
+                <div class="card-form__group">
+                  <label for="cardMonth" class="card-input__label">Expiration Date</label>
+                  <select class="card-input__input -select" id="cardMonth" v-model="cardMonth" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
+                    <option value="" disabled selected>Month</option>
+                    <option v-bind:value="n < 10 ? '0' + n : n" v-for="n in 12" v-bind:disabled="n < minCardMonth" v-bind:key="n">
+                        {{n < 10 ? '0' + n : n}}
+                    </option>
+                  </select>
+                  <select class="card-input__input -select" id="cardYear" v-model="cardYear" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
+                    <option value="" disabled selected>Year</option>
+                    <option v-bind:value="$index + minCardYear" v-for="(n, $index) in 12" v-bind:key="n">
+                        {{$index + minCardYear}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-form__col -cvv">
+                <div class="card-input">
+                  <label for="cardCvv" class="card-input__label">CVV</label>
+                  <input type="text" class="card-input__input" id="cardCvv" v-mask="'####'" maxlength="4" v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off">
+                </div>
+              </div>
+            </div>
+    
+            <button class="card-form__button">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+</article>
+<!-- footer -->
+<footer>
+  <div class="footer-container">
+      <div class="footer">
+          <div class="logo">
+              <img src="../Images/mancitylinearlogo.png" alt="" class="footer-logo" width="150px" height="200px" >
+          </div>
+          <section class="about">
+              <div class="container-heading">
+                  <h3 id="about">Office</h3>
+                 <p>Gyalpozhing College of Information Technology</p>
+                 <p>Gyalpozhing: Mongar</p>
+                 <p>Bhutan</p>
+              </div>
+          </section>
+          <section class="contact">
+              <div class="container-heading">
+                  <h3 id="contact">Contact Us</h3>
+                  <a href="#">Contacts</a>
+                  <a href="#">Supports</a>
+                  <a href="#">Jobs</a>
+                  <a href="sponsor.html">Sponsorships</a>
+              </div>
+          </section>
+          <section class="socials">
+              <div class="container-heading">
+                  <h3 id="socials"> Social Media</h3>
+                  <div class="social-logos">
+                  <a href="https://www.facebook.com/mancity/"><ion-icon name="logo-facebook" id="logo"></ion-icon></a>
+                  <a href="https://twitter.com/ManCity"><ion-icon name="logo-twitter" id="logo"></ion-icon></a>
+                 <a href="https://www.youtube.com/@mancity"> <ion-icon name="logo-youtube" id="logo"></ion-icon></a>
+                <a href="https://www.instagram.com/mancity/"> <ion-icon name="logo-instagram" id="logo"></ion-icon></a>
+                  </div>
+              </div>
+          </section>
+          <section class="account">
+              <div class="container-heading">
+                  <h3 id="account">My Account</h3>
+                  <a href="signIn.html">Sign In</a>
+                  <a href="#">View Cart</a>
+                  <a href="#">My Wishlist</a>
+                  <a href="#">Track My Order</a>
+                  <a href="#">Help</a>
+              </div>
+          </section>
+          <section class="payments">
+              <div class="container-heading">
+                  <h3 id="payments">Secured Payment Gateways</h3>
+                  <div class="methods">
+                      <a href="card.html">
+                        <img src="../Images/Cards/americanexpress.png" alt="americanexpress" id="img">
+                      <img src="../Images/Cards/mastercard.png" alt="mastercard" id="img">
+                      <img src="../Images/Cards/paypal.png" alt="paypal" id="img">
+                      <img src="../Images/Cards/visa.png" alt="visa" id="img">
+                      </a>
+                  </div>
+              </div>
+          </section>
+          <section class="news">
+              <div class="container-heading">
+                  <h3 id="news">Sign Up for our Newsletter</h3>
+                  <form action="" class="formcontents">
+                      <ion-icon name="mail-unread-outline"></ion-icon>
+                      <input type="email" placeholder="  Your Email Address here." class="email">
+                     <button type="submit" class="submit"><ion-icon name="send-outline"></ion-icon></button>
+                  </form>
+              </div>
+          </section>
+          
+         
+      </div>
+      <div class="copyright">
+          <hr>
+          <p>Manchester City - Information Management System © 2022 - All Rights Reserved</p>
+      </div>
+      
+  </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>

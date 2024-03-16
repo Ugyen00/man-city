@@ -1,0 +1,17 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card{
+    box-shadow: 0 0 100px 10px rgb(95, 94, 94);
+}
+
+h4, h5 {
+    font-family: 'Agrandir Medium';
+}
+
+h6, p {
+    font-family: 'Agrandir Light';
+}

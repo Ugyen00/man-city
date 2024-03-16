@@ -1,0 +1,94 @@
+html 
+{
+  background: rgb(223,223,223);
+background: linear-gradient(90deg, rgba(223,223,223,1) 0%, rgba(244,244,244,1) 51%, rgba(223,223,223,1) 100%);
+}
+
+body 
+{
+  background-color:transparent;
+}
+
+h5
+{
+  text-shadow: 2px -8px 9px rgb(0,16,90,0.4);
+  text-align:center;
+  font-family:var(--typo);
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:4rem;
+  margin-top: -3.7rem;
+  letter-spacing:5px;
+  color:white;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  position:relative;
+  z-index:1;
+}
+
+.card 
+{
+  margin: 1rem 0 1rem 0;
+  box-shadow: 3px 4px rgb(169, 166, 166);
+}
+.card-body
+{
+  padding:0;
+
+}
+
+a.btn
+{
+  width:100%;
+  padding: 1rem;
+  border-radius:0;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-family:var(--typo);
+  letter-spacing:4px;
+  font-size:1.1rem;
+
+}
+
+p{
+  padding:1.5rem;
+  font-family:var(--typo);
+}
+.dropend:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    left: 10.84rem;
+    top: 0.2rem;
+}
+
+/* https://ianlunn.github.io/Hover/ I'm sorry for the minify, it takes up less space so... */
+[class^="hvr-"] {margin: .4em;padding: 1em;text-transform: uppercase;cursor: pointer;border-top:4px solid white;text-decoration: none;-webkit-font-smoothing: antialiased;}
+.hvr-bounce-to-bottom{display:inline-block;vertical-align:middle;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;-webkit-transition-property:color;transition-property:color;-webkit-transition-duration:.5s;transition-duration:.5s}
+.hvr-bounce-to-bottom:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:white;-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-transition-property:transform;transition-property:transform;-webkit-transition-duration:.5s;transition-duration:.5s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}
+.hvr-bounce-to-bottom:active,.hvr-bounce-to-bottom:focus,.hvr-bounce-to-bottom:hover{color:#1c1f23;}
+.hvr-bounce-to-bottom:active:before,.hvr-bounce-to-bottom:focus:before,.hvr-bounce-to-bottom:hover:before{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transition-timing-function:cubic-bezier(.52,1.64,.37,.66);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}
+
+
+/* The tutorial I used : https://w3bits.com/css-image-hover-zoom/ */
+/* [1] The container */
+.img-hover-zoom {
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* Zoom-n-rotate Container */
+.img-hover-zoom--zoom-n-rotate img {
+  transition: transform .5s ease-in-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(1.6) rotate(25deg);
+}

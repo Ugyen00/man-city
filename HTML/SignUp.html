@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="../Images/mancitylogo.ico">
+    <link rel="stylesheet" href="../CSS/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+</head>
+<body>
+<!-- header section of the page -->
+ <section class="header">
+  <header>
+    <div class="nav">
+      <nav class="navigation-bar">
+        <a href="index.html"><img class="logo" src="../Images/mancitylogo.png"alt="Mancity logo"></a>
+        <div class="signup">
+          <h1>Sign Up</h1>
+        </div>
+    </nav>
+    </div>
+  </header>
+ </section>
+
+ <!-- for the body section of the page -->
+  <section class="body">
+
+    <!-- log in form register -->
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form">
+         <div class="name">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter your name"  onkeydown=";">
+          <small></small>
+         </div>
+
+          <div class="email">
+            <label for="email">Email:</label>
+          <input type="text" name="" id="email" placeholder="Enter your Email" onkeydown=";"  >
+          <small></small>
+          </div>
+
+          <div class="password">
+            <label for="password">Password:</label>
+            <div class="passwordBtn">
+              <input type="password" id="input">
+              <small></small>
+              <i class="fa fa-eye-slash" id="show-btn" onclick="showPassword()"></i>
+            </div>
+          </div>
+          
+          <div class="retypePassword">
+            <small></small>
+            <label for="retypePassword">Retype Password:</label>
+            <div class="retypePasswordBtn">
+              <input type="password" id="retypeInput"> 
+              <small></small>
+              <i class="fa fa-eye-slash fa2" id="show-btn" onclick="showRetypePassword()"></i>
+            </div>
+          </div>
+
+          <br>
+          <div class="sign_in">
+            
+          </div>
+          <div class="signup-btn">
+            <button class="custom-btn btn" type="submit">Sign Up</button>
+            <p class="message">Already have an account? <a href="signIn.html">Sign In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+ 
+  <script src="../JS/signIn.js"></script>
+  <script src="../JS/resetPassword.js"></script>
+</body>
+</html>

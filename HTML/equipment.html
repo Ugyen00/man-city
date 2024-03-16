@@ -1,0 +1,240 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Equiment</title>
+    <link rel="icon" href="../Images/mancitylogo.ico">
+    <link rel="stylesheet" href="../CSS/baseTemplate.css">
+   <link rel="stylesheet" href="../CSS/equipment.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- nav heads -->
+    <nav class="navbar navbar-expand-lg " style="position: sticky; z-index:100; top: 0;">
+        <div class="container-fluid">
+          <div class="dropdown">
+            <a class="navbar-brand ps-4" href="index.html"><img src="../Images/mancitylogo.png" alt="" ></a>
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home</a></li>
+              <li><a class="dropdown-item" href="notice.html">Notice Board</a></li>
+              <div class="dropend">
+                <button class=" btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Training
+               </button>
+               <ul class="dropdown-menu">
+                <li><a href="calendar.html" class="dropdown-item" >This Week</a></li>
+                <li><a href="attendance.html" class="dropdown-item" >Attendance</a></li>
+                <li><a href="equipment.html" class="dropdown-item" >Equipment Record</a></li>
+              </ul>
+              </div>
+              <div class="dropend">
+                <button class=" btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Player Services
+               </button>
+               <ul class="dropdown-menu">
+                <li><a href="medical.html" class="dropdown-item">Medical</a></li >
+                <li><a href="counselling.html" class="dropdown-item" >Counselling</a></li>
+              </ul>
+              </div>
+              <div class="dropend">
+                <button class=" btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Staff Services
+               </button>
+               <ul class="dropdown-menu">
+                <li><a href="leave.html" class="dropdown-item">Leave</a></li>
+                <li><a href="promotion.html" class="dropdown-item">Promotion</a></li >
+                <li><a href="resignation.html" class="dropdown-item" >Resignation</a></li>
+              </ul>
+              </div>
+              <li><a class="dropdown-item" href="sponsor.html">Partner and Sponsor</a></li>
+              <li><a class="dropdown-item" href="rules.html">Rules & Regulations</a></li>
+            </ul>
+          </div>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="notice.html">Notice</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://www.mancity.com/citytv/city-plus">City+</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://www.mancity.com/fixtures">Fixture</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://www.mancity.com/tickets">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="player.html">Players</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="inventory.html">Inventory</a>
+              </li>
+            </ul>
+          
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="navbar-brand" href="#"><img src="../Images/User/KNThinley.png" class="" alt="" style="width: 80px; height:80px; border-radius: 50%; border: 2px solid white;"><a>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                  <li><a class="dropdown-item" href="settings.html">Account Settings</a></li>
+                  <li><a class="dropdown-item" href="landingPage.html">Log Out</a></li>
+                </ul>
+              </div>
+          </div>
+
+        </div>
+      </nav>
+<br>
+<!-- record form -->
+<br><br>
+<article>
+  <h1 style="text-align:center; font-family:'Agrandir Heavy'; color:black;">Equipment Records</h1>
+  <hr style="border-bottom:red 1px solid; width:50%; margin:20px auto;">
+  <table class="container">
+    <thead>
+        <tr>
+            <th><h1  style="color: white;">KITS</h1></th>
+            <th><h1 style="color: white;"">Quantity</h1></th>
+            <th><h1 style="color: white;">Total Expense ($)</h1></th>
+            <th><Date style="color: white;">Date & Time</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ball</td>
+            <td>14</td>
+            <td>6369</td>
+            <td>23/11/22</td>
+        </tr>
+        <tr>
+            <td>Jersey</td>
+            <td>24</td>
+            <td>10437</td>
+            <td>02/11/22</td>
+        </tr>
+        <tr>
+            <td>Boots</td>
+            <td>7</td>
+            <td>5327</td>
+            <td>11/12/22</td>
+        </tr>
+    <tr>
+            <td>Cones</td>
+            <td>22</td>
+            <td>2961</td>
+            <td>11/10/22</td>
+        </tr>
+    <tr>
+            <td> Free-kick wall mannequin </td>
+            <td>6</td>
+            <td>4135</td>
+            <td>10/11/22</td>
+        </tr>
+    <tr>
+            <td>Speed ladders and hurdles</td>
+            <td>43</td>
+            <td>3486</td>
+            <td>11/10/22</td>
+        </tr>
+    </tbody>
+  </table>
+</article>
+ <br><br>
+
+<!-- footer -->
+<footer>
+  <div class="footer-container">
+      <div class="footer">
+          <div class="logo">
+              <img src="../Images/mancitylinearlogo.png" alt="" class="footer-logo" width="150px" height="200px" >
+          </div>
+          <section class="about">
+              <div class="container-heading">
+                  <h3 id="about">Office</h3>
+                 <p>Gyalpozhing College of Information Technology</p>
+                 <p>Gyalpozhing: Mongar</p>
+                 <p>Bhutan</p>
+              </div>
+          </section>
+          <section class="contact">
+              <div class="container-heading">
+                  <h3 id="contact">Contact Us</h3>
+                  <a href="#">Contacts</a>
+                  <a href="#">Supports</a>
+                  <a href="#">Jobs</a>
+                  <a href="sponsor.html">Sponsorships</a>
+              </div>
+          </section>
+          <section class="socials">
+              <div class="container-heading">
+                  <h3 id="socials"> Social Media</h3>
+                  <div class="social-logos">
+                  <a href="https://www.facebook.com/mancity/"><ion-icon name="logo-facebook" id="logo"></ion-icon></a>
+                  <a href="https://twitter.com/ManCity"><ion-icon name="logo-twitter" id="logo"></ion-icon></a>
+                 <a href="https://www.youtube.com/@mancity"> <ion-icon name="logo-youtube" id="logo"></ion-icon></a>
+                <a href="https://www.instagram.com/mancity/"> <ion-icon name="logo-instagram" id="logo"></ion-icon></a>
+                  </div>
+              </div>
+          </section>
+          <section class="account">
+              <div class="container-heading">
+                  <h3 id="account">My Account</h3>
+                  <a href="signIn.html">Sign In</a>
+                  <a href="#">View Cart</a>
+                  <a href="#">My Wishlist</a>
+                  <a href="#">Track My Order</a>
+                  <a href="#">Help</a>
+              </div>
+          </section>
+          <section class="payments">
+              <div class="container-heading">
+                  <h3 id="payments">Secured Payment Gateways</h3>
+                  <div class="methods">
+                      <a href="card.html">
+                        <img src="../Images/Cards/americanexpress.png" alt="americanexpress" id="img">
+                      <img src="../Images/Cards/mastercard.png" alt="mastercard" id="img">
+                      <img src="../Images/Cards/paypal.png" alt="paypal" id="img">
+                      <img src="../Images/Cards/visa.png" alt="visa" id="img">
+                      </a>
+                  </div>
+              </div>
+          </section>
+          <section class="news">
+              <div class="container-heading">
+                  <h3 id="news">Sign Up for our Newsletter</h3>
+                  <form action="" class="formcontents">
+                      <ion-icon name="mail-unread-outline"></ion-icon>
+                      <input type="email" placeholder="  Your Email Address here." class="email">
+                     <button type="submit" class="submit"><ion-icon name="send-outline"></ion-icon></button>
+                  </form>
+              </div>
+          </section>
+          
+         
+      </div>
+      <div class="copyright">
+          <hr>
+          <p>Manchester City - Information Management System © 2022 - All Rights Reserved</p>
+      </div>
+      
+  </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
